@@ -4,6 +4,7 @@ import { BsBookmarkStar } from "react-icons/bs";
 const Blog = ({blogPost, addToBookmark, readingTime}) => {
     // console.log(blogPost);
     const {
+        id, 
         cover, title, 
         posted_date, reading_time, 
         author, author_img, 
@@ -43,7 +44,7 @@ const Blog = ({blogPost, addToBookmark, readingTime}) => {
             </div>
             <button 
             className='mb-3 text-blue-500 hover:text-blue-400'
-            onClick={ () => readingTime(reading_time)}
+            onClick={ () => readingTime(id, reading_time)}
             >Mark as read</button>
             <hr />
         </div>
